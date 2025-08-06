@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 
 
-# load regulation.gov API key from .env.reg
+# load regulations.gov API key from .env.reg
 load_dotenv('.env.reg')
 api_key = os.getenv('API_KEY')
 
@@ -23,11 +23,11 @@ assemble search query
 searching for all comments that mention 'quantum' AND any of the following terms: 'technolg*', 'comput*', 'sens*', 'communicat*', 'network*
 hoping to reduce number of unrelated results (e.g. 'blood quantum')
 """
-api_url = f"https://api.regulation.gov/v4/comments?filter[searchTerm]=quantum AND (technolg* OR comput* OR sens* OR communicat* OR network*)&api_key={api_key}" 
+api_url = f"https://api.regulations.gov/v4/comments?filter[searchTerm]=quantum AND (technolg* OR comput* OR sens* OR communicat* OR network*)&api_key={api_key}" 
 
 # fetch comments
 try:
-    print(f"Fetching comments from regulation.gov API...")
+    print(f"Fetching comments from regulations.gov API...")
     response = requests.get(api_url)
     
     if response.status_code == 200: # successful response
