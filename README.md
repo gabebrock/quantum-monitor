@@ -47,8 +47,8 @@ You can choose to include attachments using include parameter. Attachments are n
 
 ------
 
-# `comments.py`
+# `data.py`
 
-The `comments` python app fetches comments from the regulations.gov API related to quantum technology, computing, sensing, and communication.
+The `data` python app fetches comments from the regulations.gov API related to quantum technology, computing, sensing, and communication and exports them to a file `comments.json` so that an API call only needs to be made to gather the most recent data.
 
 `api_url = f"https://api.regulations.gov/v4/comments?filter[searchTerm]=quantum AND (technolog* OR information OR comput* OR sens* OR communication)&api_key={api_key}"`
