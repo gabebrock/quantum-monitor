@@ -1,4 +1,4 @@
-# Quantum Monitor Regulatory Comments Fetcher
+# Quantum Regulatory Comments
 
 ## Getting Started
 
